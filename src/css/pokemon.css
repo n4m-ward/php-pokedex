@@ -1,0 +1,56 @@
+#pokemonCard {
+	width: 400px;
+}
+
+.pokeSprite {
+	width: 150px;
+}
+
+#mainPokeDiv {
+	min-height: 350px;
+}
+
+#pokeSpriteDiv {
+	float: left;
+}
+
+.pokeType {
+	top: 50px;
+}
+
+.dropdown {
+	margin-bottom: 40px;
+}
+
+#abilitiesDiv {
+	margin-top: 50px;
+	width: 80px;
+}
+
+#efectsDiv {
+	height: 200px;
+	overflow: scroll;
+}
+
+#movesDiv {
+	clear: both;
+	height: 300px;
+	overflow: auto;
+	margin-top: 20px;
+}
+
+#statsDiv {
+	clear: both;
+	height: 300px;
+}
+
+.table {
+	float: left;
+	margin-top: 20px;
+}
+
+#moveTables {
+	display:flexbox;
+	flex-wrap:wrap;
+	justify:space-between;
+}
