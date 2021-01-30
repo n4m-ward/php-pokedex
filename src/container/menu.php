@@ -26,7 +26,7 @@ foreach ($abilities as $ability) {
     $shortEfect  = $effectEntries->short_effect;
 ?>
        
-    <div class="dropdown is-primary is-outlined is-hoverable">
+    <div class="dropdown is-primary is-outlined is-hoverable is-right">
       <div class="dropdown-trigger">
         <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
           <span><?= $abilityName ?></span>
@@ -38,9 +38,9 @@ foreach ($abilities as $ability) {
       <div class="dropdown-menu" id="dropdown-menu4" role="menu">
         <div class="dropdown-content">
           <div class="dropdown-item" id="efectsDiv">
-            <p> <strong>entryEfects: </strong> <?= $entryEfects ?></p>
+            <p style="text-align: justify;"> <strong>entryEfects: </strong> <?= $entryEfects ?></p>
             <br>
-            <p> <strong>shortEfect: </strong><?= $shortEfect ?></p>
+            <p style="text-align: justify;"> <strong>shortEfect: </strong><?= $shortEfect ?></p>
           </div>
         </div>
       </div>
