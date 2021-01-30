@@ -55,7 +55,7 @@ if (isset($pokeData)) {
   <div class="content has-text-centered">
     <nav class="pagination" role="navigation" aria-label="pagination">
 
-      <form action="index.php" method="post">
+      <form action="index.php" method="post" class="button1">
             <input type="hidden" name="offset" value="<?php echo $offset -10; ?>">
             <button type="submit" class="button is-black">Previous</button>
         </form>
@@ -89,6 +89,11 @@ if (isset($pokeData)) {
         margin: 0 auto;
         margin:20px;
         text-align:center;
+    }
+    @media(max-width: 800px){
+        .button1{
+            margin-right:50px;
+        }
     }
     
 </style>
