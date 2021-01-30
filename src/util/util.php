@@ -5,7 +5,10 @@ function executarCurl($url){
     curl_setopt($chInit,CURLOPT_RETURNTRANSFER,true);
     return  json_decode(curl_exec($chInit));
 }
-
+function findPokemonWithOffset($offset){
+    $url = 'https://pokeapi.co/api/v2/pokemon?limit=10&offset=' .$offset;
+    return executarCurl($url);
+}
 function findPokemon($pokeName){
     $url = 'https://pokeapi.co/api/v2/pokemon/' . $pokeName;
     return executarCurl($url);

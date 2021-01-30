@@ -1,14 +1,22 @@
 <?php
 include('./src/util/util.php');
+if(isset($_POST['offset'])){
+    $offset = $_POST['offset'];
+    if($offset < 0){
+        $offset = 0; 
+    }
+}else{
+    $offset = 0;
+}
 if (isset($_POST['findPokemon'])) {
     $pokeName = $_POST['findPokemon'];
     if ($pokeName != '') {
         $pokeData->results[1] = findPokemon($pokeName);
     } else {
-        $pokeData = executarCurl('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0');
+        $pokeData = findPokemonWithOffset($offset);
     }
 } else {
-    $pokeData = executarCurl('https://pokeapi.co/api/v2/pokemon?limit=151&offset=0');
+    $pokeData = findPokemonWithOffset($offset);
 }
 ?>
 <html lang="pt-br">
@@ -43,6 +51,20 @@ if (isset($pokeData)) {
 ?>
       </div>
     </div>
+    <footer class="footer">
+  <div class="content has-text-centered">
+    <nav class="pagination" role="navigation" aria-label="pagination">
+
+      <form action="index.php" method="post">
+            <input type="hidden" name="offset" value="<?php echo $offset -10; ?>">
+            <button type="submit" class="button is-black">Previous</button>
+        </form>
+        <form action="index.php" method="post">
+            <input type="hidden" name="offset" value="<?php echo $offset + 10; ?>">
+            <button type="submit" class="button is-black">Next page</button>
+        </form>
+  </div>
+</footer>
 </body>
 </html>
 <style>
