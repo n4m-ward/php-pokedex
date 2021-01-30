@@ -74,14 +74,12 @@ if (isset($pokeData)) {
         clear:both;
         margin-bottom:50px;
     }
-    
     .pokeInfoDiv{
       display:flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center
     }
-    
     .searchDiv input{
         width:200px;
     }
@@ -96,12 +94,14 @@ if (isset($pokeData)) {
     .pokecolor{
         background-color:blue;
     }
+    .pokeSprite{
+        width:150px;
+    }
     @media(max-width: 800px){
         .button1{
             margin-right:50px;
         }
     }
-    
 </style>
 <script>
 
