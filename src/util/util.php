@@ -10,6 +10,7 @@ function findPokemonWithOffset($offset){
     return executarCurl($url);
 }
 function findPokemon($pokeName){
+    $pokeName = strtolower($pokeName);
     $url = 'https://pokeapi.co/api/v2/pokemon/' . $pokeName;
     return executarCurl($url);
 }
