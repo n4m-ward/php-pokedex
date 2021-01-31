@@ -10,7 +10,7 @@ foreach ($moves as $move) {
       <input type="hidden" name="pokemon" value="<?= $name ?>"/>
       <input type="hidden" name="abilitymodal" value="2"/>
       <input type="hidden" name="abilityurl" value="<?= $moveUrl ?>"/>
-      <button class="button is-primary is-outlined" aria-label="close"><?= $moveName ?></button>
+      <button class="button is-outlined is-danger" aria-label="close"><?= $moveName ?></button>
   </form>
     <?php
 }
