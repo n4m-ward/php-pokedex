@@ -8,8 +8,8 @@ $typeName = implode(" | ", $typeName);
 ?>
 <div id="mainPokeDiv">
 <div id="pokeSpriteDiv">
-    <img src="<?= $sprite ?>" alt="<?= $name ?> Foto" class="pokeSprite">
-    <h4 class="pokeType"><?= $typeName ?></h4>
+      <img src="<?= $sprite ?>" alt="<?= $name ?> Foto" class="pokeSprite">
+  <h4 class="pokeType"><?= $typeName ?></h4>
 </div>
 
 <div class="abilitiesDiv">

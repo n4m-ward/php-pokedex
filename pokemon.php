@@ -27,7 +27,7 @@ if (isset($pokemon)) {
     $moves     = $pokemon->moves;
     $sprite    = $pokemon->sprites->front_default;
     $pokeStats = $pokemon->stats;
-    
+    $typeClassName    = $pokemon->types[0]->type->name;
     foreach ($pokeStats as $onePokeStats) {
         $statName = $onePokeStats->stat->name;
         $baseStat = $onePokeStats->base_stat;
@@ -40,13 +40,14 @@ if (isset($pokemon)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/pokeType.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 </head>
 <html>
     <div class="column is-half is-offset-one-quarter">
         
-    <div class="card" id="pokemonCard">
+    <div class=" <?=$typeClassName ?>" id="pokemonCard">
       <header class="card-header">
         <p class="card-header-title">
           <?= $name ?> Dados
@@ -58,7 +59,7 @@ if (isset($pokemon)) {
           <?php
 include('./src/container/menu.php');
 ?>
-         
+
         </div>
       </div>
       <footer class="card-footer">

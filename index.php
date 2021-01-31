@@ -69,10 +69,16 @@ if (isset($pokeData)) {
 </body>
 </html>
 <style>
+    body, .footer{
+        background-color:#292929;
+    }
     .searchDiv{
         text-align:center;
         clear:both;
         margin-bottom:50px;
+    }
+    .searchDiv h2{
+        color:white;
     }
     .pokeInfoDiv{
       display:flex;

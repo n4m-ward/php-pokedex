@@ -26,7 +26,6 @@ if (isset($pokeResult)) {
       <div class="card-content">
         <div class="content" id="pokeImg">
           <img src="<?= $frontSprite ?>" alt="<?= $name ?> Sprite" class="pokeSprite">
-          <br>
         </div>
           <form action="pokemon.php" method="get">
             <input type="hidden" name="pokemon" value="<?= $name ?>"/>
